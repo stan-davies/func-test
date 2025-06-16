@@ -159,3 +159,15 @@ void fun5(
 
         free(backup);
 }
+
+void fun6(
+        // Restrict means "I promise nothing else points to this bit of memory".
+        int            *restrict res    ,
+        int            *restrict vec1   ,
+        int            *restrict vec2   ,
+        int             size
+) {
+        for (int i = 0; i < size; ++i) {
+                res[i] = vec1[i] + vec2[i];
+        }
+}

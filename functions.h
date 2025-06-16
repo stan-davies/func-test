@@ -30,4 +30,11 @@ void fun5(
         warning: duplicate const declaration specifier
 */
 
+void fun6(
+        int            *restrict res    ,
+        int            *restrict vec1   ,
+        int            *restrict vec2   ,
+        int             size
+);
+
 #endif
